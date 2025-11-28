@@ -1,4 +1,5 @@
 import tkinter as tk
+import os
 from tkinter import messagebox, ttk
 import openai
 import threading
@@ -9,8 +10,8 @@ from google.type import latlng_pb2
 from tkintermapview import TkinterMapView
 
 
-MY_GOOGLE_MAPS_KEY = "AIzaSyCzg28AeRyPbEyfMLbByt6aGRmcW1Jhm4A"
-MY_OPENROUTER_KEY = "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"
+MY_GOOGLE_MAPS_KEY = os.getenv("MY_GOOGLE_MAPS_KEY")
+MY_OPENROUTER_KEY = os.getenv("MY_OPENROUTER_KEY")
 MY_OPENAI_KEY = "YOUR_OPENAI_KEY_HERE"
 
 class FuelTrack(tk.Tk):
